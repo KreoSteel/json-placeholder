@@ -1,5 +1,4 @@
-import Home from './pages/Home/Home.jsx'
-import Info from './pages/Info/Info.jsx'
+
 import './index.css'
 
 import {
@@ -7,12 +6,14 @@ import {
   RouterProvider,
 } from "react-router";
 
-import React from "react";
+import React, { StrictMode } from "react";
 import router from "./routes/AppRoutes.jsx";
 import ReactDOM from "react-dom/client";
 
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
+  <StrictMode>
   <RouterProvider router={router} />
+  </StrictMode>
 );
